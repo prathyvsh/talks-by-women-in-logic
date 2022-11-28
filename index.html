@@ -1,8 +1,51 @@
 <!doctype html>
 <html lang="en">
+    <head>
 <meta charset="utf-8">
 <title>Talks by Women in Logic</title>
+<style>
 
-<header><h1>Talks by Women in Logic</h1></header>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+
+    }
+
+</style>
+</head>
+
+<body>
+
+    <header id="main">
+        <div class="logo"><img src="women-in-logic-talks-logo.svg" alt="Women in logic talks logo"></div>
+        <div>
+        <h1>
+            <span><em>Talks</em> by</span> Women in Logic
+        </h1>
+        <p class="tagline">Curated by Valeria de Paiva <em>&</em> friends</p>
+    </div>
+    </header>
+
+    <div id="content" class="grid-mode">
+        <div id="view-selector">
+            <div class="grid-view card">
+                <img src="grid-icon.svg" alt="Icon for grid" class="selector-icon">
+                <p>Grid</p>
+            </div>
+            <div class="list-view card">
+                <img src="list-icon.svg" alt="Icon for list" class="selector-icon">
+                <p>List</p>
+            </div>
+        </div>
+        <div id="talk-list"></div>
+    </div>
+
+    <script src="z.js"></script>
+    <script src="ui.js"></script>
+
+</body>
 
 </html>
