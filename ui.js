@@ -2,9 +2,9 @@ const talkGridView = (data) => {
 
     let {author = "No Author",
             title = "No Title",
-            date = "No Year",
-            author_image = "default-avatar.png",
-            talk_image = "cover-art.svg",
+            date = "No Date",
+            author_image = "img/default-avatar.png",
+            talk_image = "img/cover-art.svg",
             talk_link = "#",
             author_link = "#",
         description = "No description provided"} = data;
@@ -17,7 +17,7 @@ const talkGridView = (data) => {
         };
 
     return ["div.card",
-        ["a.video-thumbnail",
+        ["a.video-thumbnail", {href: talk_link},
             ["img", {alt: `${title}  by ${author} given on ${date}`, src: talk_image}]],
             ["div.date-and-author",
             ["div.title-and-date",
@@ -36,9 +36,9 @@ const talks = (data) => data.map(talkGridView);
 
 const render = async () => {
 
-    z.$("#view-selector .list-view").addEventListener("click", () => { z.$("#talk-list").classList = "list-mode"; });
+    z.$("#view-selector .list-view").addEventListener("click", () => { z.$("#content").classList = "list-mode"; });
 
-    z.$("#view-selector .grid-view").addEventListener("click", () => { z.$("#talk-list").classList = "grid-mode"; });
+    z.$("#view-selector .grid-view").addEventListener("click", () => { z.$("#content").classList = "grid-mode"; });
 
     const data = await (await fetch("./data.json")).json();
 

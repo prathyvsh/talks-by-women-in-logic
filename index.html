@@ -148,6 +148,7 @@
         max-width: 450px;
         box-sizing: border-box;
         padding-bottom: 2rem;
+        height: 640px;
     }
 
     .grid-mode #talk-list {
@@ -184,9 +185,15 @@
     }
 
     .grid-mode #talk-list .card .description {
-        height: 150px;
-        overflow: ellipsis;
-        line-height: 1.75rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    position: relative;
+    width: 400px;
+    line-height: 1.75rem;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
     }
 
     .grid-mode #talk-list .date-and-author {
@@ -267,20 +274,26 @@
 
     .list-mode #talk-list .card {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        justify-content: center;
         align-content: center;
         max-width: 940px;
         margin: 0.5rem 1rem;
+        flex-wrap: wrap;
     }
 
     .list-mode .date-and-author {
         display: flex;
         flex-flow: row;
     }
+
+
     .list-mode .date-and-author .title-and-date {
+
+        font-size: clamp(0.5vw, 3vw, 1rem);
         margin: 0 2rem;
+        width: clamp(100px, 20vw, 300px);
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .list-mode .date-and-author {
