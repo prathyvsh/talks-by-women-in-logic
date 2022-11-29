@@ -9,12 +9,14 @@ const talkGridView = (data) => {
             author_link = "#",
         description = "No description provided"} = data;
 
-        console.log(data);
-
         if(talk_link) {
             video_id = talk_link.split("watch?v=")[1];
             talk_image = `https://img.youtube.com/vi/${video_id}/maxresdefault.jpg`;
         };
+
+        const avatar_dir = "img/avatars/";
+
+        const avatar = (author_image == null) ? "img/default-avatar.svg" : avatar_dir + author_image;
 
     return ["div.card",
         ["a.video-thumbnail", {href: talk_link},
@@ -24,7 +26,7 @@ const talkGridView = (data) => {
             ["a.talk-link", {href: talk_link}, ["h3.title", title]],
                 ["time", date]],
                 ["a.author", {href: author_link},
-                ["div.avatar", ["img", {src: author_image, alt: `Portrait of ${author}`}]],
+                ["div.avatar", ["img", {src: avatar, alt: `Portrait of ${author}`}]],
                 ["p", author]]],
                 ["p.description", description]];
 

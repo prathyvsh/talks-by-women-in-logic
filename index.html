@@ -63,7 +63,6 @@
         width: 200%;
         transform-origin: top left;
         scale: 0.5;
-
     }
 
     #main h1 {
@@ -119,12 +118,12 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        transition: 0.25s ease-in-out translate;
+        sition: 0.25s ease-in-out slate;
     }
 
     #view-selector div:active {
 
-        translate: 0px 2px;
+        slate: 0px 2px;
 
     }
 
@@ -134,12 +133,12 @@
     }
 
     .grid-mode .list-view.card {
-        background: transparent;
+        background: sparent;
         box-shadow: none;
     }
 
     .list-mode .grid-view.card {
-        background: transparent;
+        background: sparent;
         box-shadow: none;
     }
 
@@ -226,9 +225,10 @@
     }
 
     .avatar img {
-        width: 200%;
-        transform-origin: top left;
-        transform: scale(0.5);
+
+       width: 100%;
+       height: auto;
+
     }
 
     .author {
@@ -308,7 +308,8 @@
 
     .list-mode .author img {
 
-        transform-origin: center left;
+        height: 80px;
+        width: 80px;
 
     }
 
@@ -326,7 +327,7 @@
 <body>
 
     <header id="main">
-        <div class="logo"><img src="women-in-logic-talks-logo.svg" alt="Women in logic talks logo"></div>
+        <div class="logo"><img src="img/women-in-logic-talks-logo.svg" alt="Women in logic talks logo"></div>
         <div>
         <h1>
             <span><em>Talks</em> by</span> Women in Logic
@@ -338,11 +339,11 @@
     <div id="content" class="grid-mode">
         <div id="view-selector">
             <div class="grid-view card">
-                <img src="grid-icon.svg" alt="Icon for grid" class="selector-icon">
+                <img src="img/grid-icon.svg" alt="Icon for grid" class="selector-icon">
                 <p>Grid</p>
             </div>
             <div class="list-view card">
-                <img src="list-icon.svg" alt="Icon for list" class="selector-icon">
+                <img src="img/list-icon.svg" alt="Icon for list" class="selector-icon">
                 <p>List</p>
             </div>
         </div>
