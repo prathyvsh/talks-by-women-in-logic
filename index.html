@@ -2,9 +2,24 @@
 <html lang="en">
     <head>
 <meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<meta name="description" content="Website curating talks by women in logic!" />
+
+
+<meta property="og:title" content="Talks by Women in Logic">
+<meta property="og:site_name" content="Talks by Women in Logic">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/metacard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@womeninlogic">
+<meta name="twitter:creator" content="@womeninlogic">
+<meta name="twitter:title" content="Talks by Women in Logic">
+<meta name="twitter:image" content="img/metacard.png">
 <title>Talks by Women in Logic</title>
 <style>
 
@@ -62,7 +77,6 @@
         width: 200%;
         transform-origin: top left;
         scale: 0.5;
-
     }
 
     #main h1 {
@@ -118,12 +132,12 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        transition: 0.25s ease-in-out translate;
+        sition: 0.25s ease-in-out slate;
     }
 
     #view-selector div:active {
 
-        translate: 0px 2px;
+        slate: 0px 2px;
 
     }
 
@@ -133,12 +147,12 @@
     }
 
     .grid-mode .list-view.card {
-        background: transparent;
+        background: sparent;
         box-shadow: none;
     }
 
     .list-mode .grid-view.card {
-        background: transparent;
+        background: sparent;
         box-shadow: none;
     }
 
@@ -148,6 +162,7 @@
         max-width: 450px;
         box-sizing: border-box;
         padding-bottom: 2rem;
+        height: 640px;
     }
 
     .grid-mode #talk-list {
@@ -184,9 +199,15 @@
     }
 
     .grid-mode #talk-list .card .description {
-        height: 150px;
-        overflow: ellipsis;
-        line-height: 1.75rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    position: relative;
+    width: 400px;
+    line-height: 1.75rem;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
     }
 
     .grid-mode #talk-list .date-and-author {
@@ -218,9 +239,10 @@
     }
 
     .avatar img {
-        width: 200%;
-        transform-origin: top left;
-        transform: scale(0.5);
+
+       width: 100%;
+       height: auto;
+
     }
 
     .author {
@@ -267,20 +289,26 @@
 
     .list-mode #talk-list .card {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        justify-content: center;
         align-content: center;
         max-width: 940px;
         margin: 0.5rem 1rem;
+        flex-wrap: wrap;
     }
 
     .list-mode .date-and-author {
         display: flex;
         flex-flow: row;
     }
+
+
     .list-mode .date-and-author .title-and-date {
+
+        font-size: clamp(0.5vw, 3vw, 1rem);
         margin: 0 2rem;
+        width: clamp(100px, 20vw, 300px);
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .list-mode .date-and-author {
@@ -294,7 +322,8 @@
 
     .list-mode .author img {
 
-        transform-origin: center left;
+        height: 80px;
+        width: 80px;
 
     }
 
@@ -312,7 +341,7 @@
 <body>
 
     <header id="main">
-        <div class="logo"><img src="women-in-logic-talks-logo.svg" alt="Women in logic talks logo"></div>
+        <div class="logo"><img src="img/women-in-logic-talks-logo.svg" alt="Women in logic talks logo"></div>
         <div>
         <h1>
             <span><em>Talks</em> by</span> Women in Logic
@@ -324,11 +353,11 @@
     <div id="content" class="grid-mode">
         <div id="view-selector">
             <div class="grid-view card">
-                <img src="grid-icon.svg" alt="Icon for grid" class="selector-icon">
+                <img src="img/grid-icon.svg" alt="Icon for grid" class="selector-icon">
                 <p>Grid</p>
             </div>
             <div class="list-view card">
-                <img src="list-icon.svg" alt="Icon for list" class="selector-icon">
+                <img src="img/list-icon.svg" alt="Icon for list" class="selector-icon">
                 <p>List</p>
             </div>
         </div>
